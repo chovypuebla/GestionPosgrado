@@ -1,0 +1,178 @@
+// Request genérico para cualquier operación
+class CrudRequest {
+    String operacion; // CREATE, READ, UPDATE, DELETE
+    String entidad;   // ALUMNO, DOCENTE, COLOQUIO, etc.
+    Map<String, Object> datos;
+    String criterioBusqueda; // Para READ y DELETE
+}
+// Cuando se solicita algunas de las operaciones debe contener 
+// Response 
+class CrudResponse {
+    String status;     // éxito, error
+    String mensaje;
+    Object datos;
+    int codigoError;
+}
+
+---------------
+
+// Algoritmo principal del CRUD 
+INICIO ejecutarOperacionCRUD(CrudRequest request)
+    // PASO 1: Validación básica
+    SI request.operacion ES VACÍO O request.entidad ES VACÍO ENTONCES
+        RETORNAR error("Operación o entidad no especificada")
+    FIN SI
+    
+    // PASO 2: Validar permisos de usuario
+    SI NO usuarioTienePermiso(request.operacion, request.entidad) ENTONCES
+        RETORNAR error("Permisos insuficientes")
+    FIN SI
+    
+    // PASO 3: Enrutar según operación
+    SEGÚN request.operacion HACER
+        CASO "CREATE":
+            RETORNAR ejecutarCreacion(request)
+        CASO "READ":
+            RETORNAR ejecutarConsulta(request)
+        CASO "UPDATE":
+            RETORNAR ejecutarActualizacion(request)
+        CASO "DELETE":
+            RETORNAR ejecutarEliminacion(request)
+        DEFECTO:
+            RETORNAR error("Operación no soportada")
+    FIN SEGÚN
+FIN
+
+//Algoritmo de CREATE
+INICIO ejecutarCreacion(request)
+    // Validar datos requeridos
+    datos_validados = validarDatosCreacion(request.entidad, request.datos)
+    SI datos_validados.tieneErrores ENTONCES
+        RETORNAR error("Datos inválidos: " + datos_validados.errores)
+    FIN SI
+    
+    // Verificar unicidad (ej: matrícula, ID único)
+    SI existeRegistroUnico(request.entidad, request.datos) ENTONCES
+        RETORNAR error("Registro ya existe")
+    FIN SI
+    
+    // Ejecutar inserción
+    nuevo_id = BD.insertar(request.entidad, request.datos)
+    SI nuevo_id > 0 ENTONCES
+        RETORNAR exito("Registro creado", {"id": nuevo_id})
+    SINO
+        RETORNAR error("Error al crear registro")
+    FIN SI
+FIN
+
+//Algoritmo READ
+INICIO ejecutarConsulta(request)
+    // Determinar tipo de consulta
+    SI request.criterioBusqueda NO ES VACÍO ENTONCES
+        // Búsqueda específica
+        resultados = BD.buscarPorCriterio(request.entidad, request.criterioBusqueda)
+    SINO
+        // Consulta general (todos los registros)
+        resultados = BD.obtenerTodos(request.entidad)
+    FIN SI
+    
+    // Aplicar filtros y paginación si es necesario
+    resultados_filtrados = aplicarFiltros(resultados, request.filtros)
+    resultados_paginados = aplicarPaginacion(resultados_filtrados, request.pagina)
+    
+    RETORNAR exito("Consulta exitosa", resultados_paginados)
+FIN
+
+//Algoritmo UPDATE
+INICIO ejecutarActualizacion(request)
+    // Validar identificador único
+    identificador = obtenerIdentificadorUnico(request.entidad, request.datos)
+    SI identificador ES VACÍO ENTONCES
+        RETORNAR error("Identificador único no especificado")
+    FIN SI
+    
+    // Verificar que el registro existe
+    SI NO existeRegistro(request.entidad, identificador) ENTONCES
+        RETORNAR error("Registro no encontrado")
+    FIN SI
+    
+    // Validar datos a actualizar
+    datos_validados = validarDatosActualizacion(request.entidad, request.datos)
+    
+    // Ejecutar actualización
+    filas_afectadas = BD.actualizar(request.entidad, identificador, datos_validados)
+    SI filas_afectadas > 0 ENTONCES
+        RETORNAR exito("Registro actualizado")
+    SINO
+        RETORNAR error("No se pudo actualizar el registro")
+    FIN SI
+FIN
+
+//Algoritmo DELETE
+INICIO ejecutarEliminacion(request)
+    // Validar identificador
+    identificador = request.criterioBusqueda
+    SI identificador ES VACÍO ENTONCES
+        RETORNAR error("Identificador requerido para eliminación")
+    FIN SI
+    
+    // Verificar existencia
+    SI NO existeRegistro(request.entidad, identificador) ENTONCES
+        RETORNAR error("Registro no encontrado")
+    FIN SI
+    
+    // Validar restricciones de integridad referencial
+    SI tieneDependencias(request.entidad, identificador) ENTONCES
+        RETORNAR error("No se puede eliminar: tiene registros dependientes")
+    FIN SI
+    
+    // Ejecutar eliminación (lógica o física)
+    filas_afectadas = BD.eliminar(request.entidad, identificador)
+    SI filas_afectadas > 0 ENTONCES
+        RETORNAR exito("Registro eliminado")
+    SINO
+        RETORNAR error("Error al eliminar registro")
+    FIN SI
+FIN
+
+//Tabla de Configuración de Entidades 
+Map<String, EntidadConfig> configEntidades = {
+    "ALUMNO": {
+        tabla: "alumnos",
+        idUnico: "matricula",
+        camposRequeridos: ["matricula", "nombre", "correo"],
+        camposUnicos: ["matricula", "correo_personal"],
+        relaciones: ["cursos", "expediente"]
+    },
+    "DOCENTE": {
+        tabla: "docentes", 
+        idUnico: "id_docente",
+        camposRequeridos: ["id_docente", "nombre", "facultad"],
+        // ... configuración específica
+    },
+    "COLOQUIO": {
+        // ... configuración específica
+    }
+};
+
+//Algoritmo para validar entidades y datos
+INICIO validarDatosCreacion(entidad, datos)
+    config = configEntidades[entidad]
+    errores = []
+    
+    // Validar campos requeridos
+    PARA CADA campo IN config.camposRequeridos HACER
+        SI datos[campo] ES VACÍO ENTONCES
+            errores.agregar("Campo requerido: " + campo)
+        FIN SI
+    FIN PARA
+    
+    // Validar unicidad
+    PARA CADA campo IN config.camposUnicos HACER
+        SI BD.existeValorUnico(entidad, campo, datos[campo]) ENTONCES
+            errores.agregar("Valor duplicado en: " + campo)
+        FIN SI
+    FIN PARA
+    
+    RETORNAR {"valido": (errores.vacio), "errores": errores}
+FIN
