@@ -13,6 +13,9 @@
   - [Desarrollo del Sistema](#desarrollo-del-sistema)
     - [Creación del proyecto](#creación-del-proyecto)
     - [Conexión a la base de datos](#conexión-a-la-base-de-datos)
+    - [Estructura del Data](#estructura-del-data)
+    - [Estructura de los Controladores](#estructura-de-los-controladores)
+    - [Estructura de la Vista](#estructura-de-la-vista)
 
 ## 1.2. Objetivo del documento
 
@@ -143,5 +146,60 @@ Y para el lado del cliente puedes usa el index ubicado en **Views >> Prueba >> I
 ![Prueba de Conexión](image-6.png)
 
 Solo recuerda escribir el nombre del directorio de **Prueba** para poder visualizar el resultado.
+
+### Estructura del Data
+
+**Entidades**
+
+Aquí se está empleando un modelo, vista y controlador, en donde los modelos son las clases de todas las tablas de la base de datos que el sistema va a mapear, en este caso debes tomar en cuenta:
+
+- **Tipo de dato**: Como estás manejando los datos en la base de datos si son de carácter time, varchra, int o float
+- **Permiten valor nulo**: Observa con detalle si todos las columnas de datos que se van a ingresar se permiten tener o no campos vacíos, ya que al momento de codificar las operaciones del sistema como registrar y crear perfiles, pueden crearse conflicto y lanzar errores de sistema inesperados
+
+![entidades docente](image-7.png)
+
+Observa que en la imagen de arriba que los corchetes son pequeñas etiquetas para identificar los datos que se están declarando son la llave primaria de la entidad o no se permiten valores nulos, aquí es un ejercicio de reforzar y obligar al usuario del sistema a no saltarse los campos que son necesarios y que la base de datos no contenga campos importantes como vacíos.
+
+**Contexto de la Aplicación**
+
+Este archivo es recibir la conexión de la base de datos y por ende se crea con el uso de un constructor del mismo nombre del objeto y se declaran las tablas de la base de datos que van a ser el punto de ejericio de manejo de información del sistema, es decir que si tablas no son declaradas en este archivo no pueden manejarse su información.
+
+![contexto tablas](image-8.png)
+
+### Estructura de los Controladores
+
+Entity Framework tiene una estandarización para evitar que el desarrollador utilice sentencias SQL o de otro para realizar las operaciones que están diseñandose para el sistema, todos los frameworks cuando se trabajan con servicios web o móviles omiten esto, con el fin de garantizar una seguridad en el sistema y que el usuario no tenga conocimiento de lo que se esta realizando o desplegando para el manejo de la información en pantalla.
+
+En el caso del Alumno y del docente manejan 4 requerimientos funcionales que vienen ligados a las funciones del CRUD:
+- **Crear**: Registro en el sistema
+- **Visualizar (Read)**: Mostrar en pantalla todos los registros dados de alta en la base de datos y en el sistema.
+- **Actualizar**: Modificar la información de los registros.
+- **Eliminar**: Eliminar de la base datos los registros deseados.
+
+Son operaciones sobre la entidad ya previamente declarada, Entity maneja el uso de métodos y funciones algo simple para el manejo del código.
+
+Aquí conforme se vayan añadiendo posibles columnas de datos a las tablas de la base de datos, aquí en el entorno de desarrollo se pueden realizar migraciones directas a la base de datos, pero es recomendable que se realice directamente en la base de datos y luego declarar para usarla en el controlador.
+
+Es importante tomar en cuenta que Create cuenta con dos diferencias de métodos:
+- **Get**: recupera los datos del sistema y en este caso es desplegar su información en pantalla como se observa en el método
+- **Post**: mandar datos nuevos al sistema, es decir el usuario va a desplegar una nueva fila de información a la tabla de la base de datos.
+
+### Estructura de la Vista
+
+
+Este tipo de proyecto viene incluido por defecto el uso de boostrap para el diseño de estilos ya por defecto, aquí se manejan con el uso de html la vista del sistema final, aquí solo es emplear como el uso de C# y asi como etiquetas para instanciar lo declarado en las entidades y también por consiguiente desplegar la información a la manera como desees estructurarlo.
+
+Los diseños y estilos pueden cambiarse de acuerdo a las necesidades del sistema que se soliciten.
+
+Hay que tener el suficiente cuidado y atención en como aasignarles su nombre a cada una de las ventanas que se deseen diseñar por cada entidad que necesite.
+
+Aquí un ejemplo:
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
+**Solo demostración**
+
+
 
 Escrito y desarrollado por **Rodolfo Romero Miron**, *2025*
