@@ -1,0 +1,102 @@
+﻿@model gestorFcc.Data.Entidades.Docente
+
+@{
+    ViewData["Title"] = "Registrar Docente";
+}
+
+<h1>Registrar Nuevo Docente</h1>
+
+<hr />
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="id_docente" class="control-label">Matrícula</label>
+                <input asp-for="id_docente" class="form-control" />
+                <span asp-validation-for="id_docente" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="nombre" class="control-label">Nombre </label>
+                <input asp-for="nombre" class="form-control" />
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="apellidoPaterno" class="control-label">Apellido Paterno *</label>
+                <input asp-for="apellidoPaterno" class="form-control" />
+                <span asp-validation-for="apellidoPaterno" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="apellidoMaterno" class="control-label">Apellido Materno *</label>
+                <input asp-for="apellidoMaterno" class="form-control" />
+                <span asp-validation-for="apellidoMaterno" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="telefono" class="control-label">Teléfono</label>
+                <input asp-for="telefono" class="form-control" />
+                <span asp-validation-for="telefono" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="celular" class="control-label">Celular</label>
+                <input asp-for="celular" class="form-control" />
+                <span asp-validation-for="celular" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="nacimiento" class="control-label">Fecha de Nacimiento</label>
+                <input asp-for="nacimiento" type="date" class="form-control" />
+                <span asp-validation-for="nacimiento" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="adscripcion" class="control-label">Adscripción</label>
+                <textarea asp-for="adscripcion" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="adscripcion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="cubiculo" class="control-label">Cubículo</label>
+                <textarea asp-for="cubiculo" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="cubiculo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="correoBuap" class="control-label">Correo Buap *</label>
+                <input asp-for="correoBuap" class="form-control" type="email" />
+                <span asp-validation-for="correoBuap" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="correoViep" class="control-label">Correo VIEP</label>
+                <input asp-for="correoViep" class="form-control" type="email" />
+                <span asp-validation-for="correoViep" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group mb-3">
+                <label asp-for="tesista" class="control-label">Tesista</label>
+                <input asp-for="tesista" class="form-control" />
+                <span asp-validation-for="tesista" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Guardar Docente</button>
+                <a asp-action="Index" class="btn btn-secondary">← Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>

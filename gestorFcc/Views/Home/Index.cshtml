@@ -1,8 +1,48 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dashboard";
 }
+<h1>Dashboard Principal</h1>
+<p class="lead">@ViewBag.Mensaje</p>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row mt-4">
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Alumnos</h5>
+                <p class="card-text">Gestionar estudiantes</p>
+                <a href="/Alumno/Index" class="btn btn-primary">Gestionar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Profesores</h5>
+                <p class="card-text">Gestionar profesores</p>
+                <a href="/Docente/Index" class="btn btn-primary">Gestionar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Cursos</h5>
+                <p class="card-text">Gestionar materias</p>
+                <a href="/Curso" class="btn btn-primary">Gestionar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Coloquios</h5>
+                <p class="card-text">Eventos académicos</p>
+                <a href="/Coloquio" class="btn btn-primary">Gestionar</a>
+            </div>
+        </div>
+    </div>
+
 </div>

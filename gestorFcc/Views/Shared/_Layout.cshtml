@@ -1,14 +1,31 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - gestorFcc</title>
+    <title>@ViewData["Title"] - Gestión Posgrado FCC</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/gestorFcc.styles.css" asp-append-version="true" />
 </head>
 <body>
+
+    <nav class="navbar navbar-expabnd-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/Home">
+                Gestión Posgrado FCC    
+            </a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/Alumnos">Alumnos</a>
+                <a class="nav-link" href="/Docentes">Docentes</a>
+                <a class="nav-link" href="/Cursos">Cursos</a>
+                <a class="nav-link" href="/Coloquios">Coloquios</a>
+                <a class="nav-link" href="/Account/Logout">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">

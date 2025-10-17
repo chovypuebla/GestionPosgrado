@@ -10,8 +10,6 @@
     <Folder Include="Models\Entidades\" />
     <Folder Include="Models\Vista del Modelo\" />
     <Folder Include="Servicios\Interfaces\" />
-    <Folder Include="Views\Alumno\" />
-    <Folder Include="Views\Docente\" />
     <Folder Include="Views\Coloquio\" />
     <Folder Include="Views\Curso\" />
   </ItemGroup>

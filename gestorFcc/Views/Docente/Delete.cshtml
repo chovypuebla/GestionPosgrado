@@ -1,0 +1,45 @@
+﻿@model gestorFcc.Data.Entidades.Docente
+
+@{
+    ViewData["Title"] = "Eliminar Docente";
+}
+
+<h1>Elimar Docente</h1>
+
+<h3>¿Está seguro que desea eliminar este alumno?</h3>
+
+<div class="alert alert-warning">
+    <strong>Advertencia: </strong> Esta acción no se puede deshacer.
+</div>
+
+<div>
+    <h4>Información del Docente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Matricula</dt>
+        <dd class="col-sm-9">@Model.id_docente</dd>
+
+        <dt class="col-sm-3">Apellido Paterno</dt>
+        <dd class="col-sm-9">@Model.apellidoPaterno</dd>
+
+        <dt class="col-sm-3">Apellido Materno</dt>
+        <dd class="col-sm-9">@Model.apellidoMaterno</dd>
+
+        <dt class="col-sm-3">Nombre</dt>
+        <dd class="col-sm-9">@Model.nombre</dd>
+
+        <dt class="col-sm-3">Correo BUAP</dt>
+        <dd class="col-sm-9">@Model.correoBuap</dd>
+
+        <dt class="col-sm-3">Celular</dt>
+        <dd class="col-sm-9">@Model.celular</dd>
+    </dl>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="id_docente" />
+        <button type="submit" class="btn btn-danger">Si, Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+
+</div>
+

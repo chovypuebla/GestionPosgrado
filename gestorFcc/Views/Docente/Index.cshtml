@@ -1,0 +1,51 @@
+﻿@model IEnumerable<gestorFcc.Data.Entidades.Docente>
+
+@{
+    ViewData["Title"] = "Lista de Docentes";
+}
+
+<h1>Lista de Docentes</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Registrar Nuevo Docente</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Matricula</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Fecha de Registro</th>
+            <th>Fecha de Actualización</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id_docente</td>
+                <td>@item.apellidoPaterno</td>
+                <td>@item.apellidoMaterno</td>
+                <td>@item.nombre</td>
+                <td>@item.correoBuap</td>
+                <td>@(item.fechaRegistro?.ToString("dd/MM/yyyy") ?? "N/A")</td>
+                <td>@(item.fechaActualizacion?.ToString("dd/MM/yyyy") ?? "N/A")</td>
+                <td><a asp-action="Edit" asp-route-id="@item.id_docente" class="btn btn-warning btn-sm">Editar</a></td>
+                <td><a asp-action="Delete" asp-route-id="@item.id_docente" class="btn btn-danger btn-sm">Eliminar</a></td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+@if (!Model.Any())
+{
+    <div class="alert alert-info" role="alert">
+        No hay docentes registrados en el sistema.
+    </div>
+}
