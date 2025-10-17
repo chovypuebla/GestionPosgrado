@@ -15,3 +15,23 @@ Select * from curso;
 
 -- Modificaciones a la columna del nombre del curso
 -- añadir en la db alumno, coordinador (indispensable para inicio de sesión)
+
+--Añadir columna fecha de actualización, indispensable para las entidades Alumno y Docente
+
+ALTER TABLE docente
+ADD fechaActualizacion DATETIME;
+
+ALTER TABLE alumno
+ADD fechaActualizacion DATETIME;
+
+ALTER TABLE alumno
+ADD apellidoPaterno varchar(100);
+
+ALTER TABLE alumno
+ADD apellidoMaterno varchar(100);
+
+ALTER TABLE docente
+ADD apellidoPaterno varchar(100);
+
+ALTER TABLE docente
+ADD apellidoMaterno varchar(100);
