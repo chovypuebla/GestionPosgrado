@@ -20,3 +20,139 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*Campos con error usando clases de validacion de ASP.NET*/
+
+/* Campos con error usando clases de validación de ASP.NET */
+.input-validation-error {
+    border-color: #dc3545 !important;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* Campos válidos */
+.input-validation-valid:not(:placeholder-shown) {
+    border-color: #198754;
+}
+
+/* Mensajes de error */
+.field-validation-error {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}
+
+/* Mensajes de error válidos (ocultos) */
+.field-validation-valid {
+    display: none;
+}
+
+/* Resumen de validación */
+.validation-summary-errors {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+    .validation-summary-errors ul {
+        margin-bottom: 0;
+        padding-left: 1.5rem;
+    }
+
+/* Ocultar resumen cuando es válido */
+.validation-summary-valid {
+    display: none;
+}
+
+/* Labels de campos requeridos */
+label.control-label:after {
+    content: "";
+    margin-left: 3px;
+}
+
+label.control-label[data-required="true"]:after,
+label[for*="matricula"]:after,
+label[for*="nombre"]:after,
+label[for*="apellidoPaterno"]:after,
+label[for*="correo"]:after {
+    content: " *";
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Animación de error */
+.input-validation-error,
+.is-invalid {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Alertas personalizadas */
+.alert-validation-error {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Compatibilidad con Bootstrap 5 */
+.form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+}
+
+.form-control.is-valid {
+    border-color: #198754;
+    padding-right: calc(1.5em + 0.75rem);
+}
+
+/* Focus en campos con error */
+.input-validation-error:focus,
+.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Mensajes de ayuda */
+.form-text {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #6c757d;
+}
+
+/* Estilos para campos de solo lectura */
+.form-control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<gestorFcc.Data.Entidades.Curso>
+
+@{
+    ViewData["Title"] = "Lista de Cursos";  
+}
+
+<h1>Lista de Cursos</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código del Curso</th>
+            <th>Nombre del Curso</th>
+            <th>Periodo</th>
+            <th>Año</th>
+            <th>Fecha de Registro</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id_curso</td>
+                <td>@item.nombre</td>
+                <td>@item.periodo</td>
+                <td>@item.anio</td>
+                <td>@(item.fechaRegistroCurso?.ToString("dd/MM/yyyy") ?? "N/A")</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info" role="alert">
+        No hay cursos registrados en el sistema.
+    </div>
+}
+

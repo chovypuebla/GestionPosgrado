@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="Edit">
+        <form asp-action="Edit" id="EditDocente">
             @Html.AntiForgeryToken()
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -93,3 +93,15 @@
         </form>
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/validarForm.js"></script>
+    <script>
+        //Incializar validación.
+        inicializarValidacionFormulario(#EditDocente);
+        /**Validar Docente
+         * 
+         */
+    </script>
+}

@@ -17,42 +17,42 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="Create">
+        <form asp-action="Create" id="formDocente">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group mb-3">
                 <label asp-for="id_docente" class="control-label">Matrícula</label>
-                <input asp-for="id_docente" class="form-control" />
+                <input asp-for="id_docente" class="form-control" placeholder="123457890" />
                 <span asp-validation-for="id_docente" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="nombre" class="control-label">Nombre </label>
-                <input asp-for="nombre" class="form-control" />
+                <input asp-for="nombre" class="form-control" placeholder="Ingrese el nombre" />
                 <span asp-validation-for="nombre" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
-                <label asp-for="apellidoPaterno" class="control-label">Apellido Paterno *</label>
-                <input asp-for="apellidoPaterno" class="form-control" />
+                <label asp-for="apellidoPaterno" class="control-label">Apellido Paterno</label>
+                <input asp-for="apellidoPaterno" class="form-control" placeholder="Ingrese el apellido paterno" />
                 <span asp-validation-for="apellidoPaterno" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
-                <label asp-for="apellidoMaterno" class="control-label">Apellido Materno *</label>
-                <input asp-for="apellidoMaterno" class="form-control" />
+                <label asp-for="apellidoMaterno" class="control-label">Apellido Materno</label>
+                <input asp-for="apellidoMaterno" class="form-control" placeholder="Ingrese el apellido materno" />
                 <span asp-validation-for="apellidoMaterno" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="telefono" class="control-label">Teléfono</label>
-                <input asp-for="telefono" class="form-control" />
+                <input asp-for="telefono" class="form-control" placeholder="Ingrese el número de teléfono"/>
                 <span asp-validation-for="telefono" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="celular" class="control-label">Celular</label>
-                <input asp-for="celular" class="form-control" />
+                <input asp-for="celular" class="form-control" placeholder="Ingrese el número de Celular"/>
                 <span asp-validation-for="celular" class="text-danger"></span>
             </div>
 
@@ -75,14 +75,14 @@
             </div>
 
             <div class="form-group mb-3">
-                <label asp-for="correoBuap" class="control-label">Correo Buap *</label>
-                <input asp-for="correoBuap" class="form-control" type="email" />
+                <label asp-for="correoBuap" class="control-label">Correo Buap</label>
+                <input asp-for="correoBuap" class="form-control" type="email" placeholder="Ingrese el correo institucional"/>
                 <span asp-validation-for="correoBuap" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="correoViep" class="control-label">Correo VIEP</label>
-                <input asp-for="correoViep" class="form-control" type="email" />
+                <input asp-for="correoViep" class="form-control" type="email" placeholder="Ingrese el correo asignado por VIEP" />
                 <span asp-validation-for="correoViep" class="text-danger"></span>
             </div>
 
@@ -100,3 +100,12 @@
         </form>
     </div>
 </div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/validarForm.js"></script>
+    <script>
+        //Incializar validación
+        inicializarValidacionFormulario(#formDocente);
+    </script>
+}

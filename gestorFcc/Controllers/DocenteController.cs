@@ -20,9 +20,78 @@ namespace gestorFcc.Controllers
         //Listar todos los docentes registrados en la bd
         public async Task<IActionResult> Index()
         {
-            var docente = await _context.Docente.ToListAsync();
-            return View(docente);
+            try
+            {
+                var docente = await _context.Docente.Select(a => new Docente
+                {
+                    id_docente = a.id_docente ?? "N/A",
+                    nombre = a.nombre ?? "Sin nombre",
+                    apellidoPaterno = a.apellidoPaterno ?? "",
+                    apellidoMaterno = a.apellidoMaterno ?? "",
+                    telefono = a.telefono ?? "Sin teléfono",
+                    celular = a.celular ?? "Sin celular",
+                    nacimiento = a.nacimiento,
+                    adscripcion = a.adscripcion ?? "Sin adscripción",
+                    cubiculo = a.cubiculo ?? "Sin cubículo",
+                    correoBuap = a.correoBuap ?? "Sin correo BUAP",
+                    correoViep = a.correoViep ?? "Sin correo VIEP",
+                    tesista = a.tesista ?? "No especificado",
+                    fechaRegistro = a.fechaRegistro,
+                    fechaActualizacion = a.fechaActualizacion
+
+
+
+                }).ToListAsync();
+                return View(docente);
+            }
+            catch (Exception ex)
+            {
+                // Log del error para debugging
+                Console.WriteLine($"Error al cargar docentes: {ex.Message}");
+                // Carga alternativa segura
+                return await CargarDocentesSeguro();
+            }
         }
+        // Método auxiliar para carga segura
+
+        private async Task<IActionResult> CargarDocentesSeguro()
+        {
+            var docentesRaw = await _context.Docente.ToListAsync();
+
+            try
+            {
+                foreach (var docente in docentesRaw)
+                {
+                    docentesRaw.Add(new Docente
+                    {
+                        id_docente = docente.id_docente ?? "N/A",
+                        nombre = docente.nombre ?? "Sin nombre",
+                        apellidoPaterno = docente.apellidoPaterno ?? "",
+                        apellidoMaterno = docente.apellidoMaterno ?? "",
+                        telefono = docente.telefono ?? "Sin teléfono",
+                        celular = docente.celular ?? "Sin celular",
+                        nacimiento = docente.nacimiento,
+                        adscripcion = docente.adscripcion ?? "Sin adscripción",
+                        cubiculo = docente.cubiculo ?? "Sin cubículo",
+                        correoBuap = docente.correoBuap ?? "Sin correo BUAP",
+                        correoViep = docente.correoViep ?? "Sin correo VIEP",
+                        tesista = docente.tesista ?? "No especificado",
+                        fechaRegistro = docente.fechaRegistro,
+                        fechaActualizacion = docente.fechaActualizacion
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log del error para debugging
+                Console.WriteLine($"Error al procesar docentes: {ex.Message}");
+            }
+
+            return View(docentesRaw);
+
+        }
+
+
         //Mostrar formulario
         public IActionResult Create()
         {

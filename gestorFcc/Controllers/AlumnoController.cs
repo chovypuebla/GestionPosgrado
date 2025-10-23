@@ -23,8 +23,7 @@ namespace gestorFcc.Controllers
             try
             {
                 // SOLUCIÓN: Carga segura con manejo explícito de NULLs
-                var alumnos = await _context.Alumno
-                    .Select(a => new Alumno
+                var alumnos = await _context.Alumno.Select(a => new Alumno
                     {
                         matricula = a.matricula ?? "N/A",
                         nombre = a.nombre ?? "Sin nombre",
@@ -92,7 +91,7 @@ namespace gestorFcc.Controllers
             return View();
         }
 
-        //Guardar nuevo registro de alumno}
+        //Guardar nuevo registro de alumno
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("matricula, nombre, apellidoPaterno, apellidoMaterno, direccion, telefono, celular, correo, fechaRegistro")] Alumno alumno)
