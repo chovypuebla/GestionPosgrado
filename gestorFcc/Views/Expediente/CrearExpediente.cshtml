@@ -1,0 +1,131 @@
+﻿@model gestorFcc.Data.Entidades.Expediente
+
+@{
+    ViewBag.Title = "Subir archivos de expediente del alumno";
+    var alumno = ViewBag.Alumno as dynamic;
+    var expedienteExiste = ViewBag.expedienteExiste;
+}
+<h1>Subir Archivos para el expediente</h1>
+
+@if (ViewBag.ExpedienteExistente)
+{
+    <div class="alert alert-info">
+        Este alumno ya tiene un expediente. Los archivos reemplazarán a los existentes
+    </div>
+}
+
+<div class="card mb-4">
+    <div class="card-header">
+        <h5>Información del alumno</h5>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Matrícula</dt>
+            <dd class="col-sm-9">@alumno.matricula</dd>
+
+
+            <dt class="col-sm-3">Nombre:</dt>
+            <dd class="col-sm-9">@alumno.nombre @alumno.apellidoPaterno @alumno.apellidoMaterno</dd>
+        </dl>
+    </div>
+</div>
+
+
+<form asp-action="CrearExpediente" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="matricula" value="@alumno.matricula" />
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">INE/IFE *</label>
+                <input type="file" name="ine" class="form-control" accept=".pdf" required />
+                <small class="form-text text-muted">Formato PDF</small>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Carta Compromiso *</label>
+                <input type="file" name="cartaCompromiso" class="form-control" accept=".pdf" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Carta Recomendación 1 *</label>
+                <input type="file" name="cartaRecomendacion1" class="form-control" accept=".pdf" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Carta Recomendación 2</label>
+                <input type="file" name="cartaRecomendacion2" class="form-control" accept=".pdf" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Protocolo de Tesis *</label>
+                <input type="file" name="protocolo" class="form-control" accept=".pdf" required />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">EXANI III *</label>
+                <input type="file" name="exani" class="form-control" accept=".pdf" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Título Licenciatura *</label>
+                <input type="file" name="tituloLicenciatura" class="form-control" accept=".pdf" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Cédula Licenciatura *</label>
+                <input type="file" name="cedulaLicenciatura" class="form-control" accept=".pdf" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Curriculum Vitae *</label>
+                <input type="file" name="curriculumVitae" class="form-control" accept=".pdf" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Kardex Semestral *</label>
+                <input type="file" name="kardexSemestral" class="form-control" accept=".pdf" required />
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="form-label">Comprobante Toefl *</label>
+                <input type="file" name="comprobanteToefl" class="form-control" accept=".pdf" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Titulo de Maestría</label>
+                <input type="file" name="tituloMaestria" class="form-control" accept=".pdf"  />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Cedula de Maestria</label>
+                <input type="file" name="cedulaMaestria" class="form-control" accept=".pdf"/>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Publicaciones *</label>
+                <input type="file" name="publicaciones" class="form-control" accept=".pdf"  />
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="form-label">Pago de Inscripción</label>
+                <input type="file" name="pagoInscripcion" class="form-control" accept=".pdf" required />
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">Guardar Expediente</button>
+        <a asp-action="SeleccionarExpediente" class="btn btn-secondary">← Volver</a>
+    </div>
+
+
+
+</form>

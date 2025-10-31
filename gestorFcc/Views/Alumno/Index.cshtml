@@ -6,6 +6,13 @@
 
 <h1>Lista de Alumnos</h1>
 
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        ✅ @TempData["Success"]
+    </div>
+}
+
 <p>
     <a asp-action="Create" class="btn btn-success">Registrar Nuevo Alumno</a>
 </p>

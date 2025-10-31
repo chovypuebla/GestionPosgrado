@@ -32,6 +32,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/AlumnoCurso/AsignacionAlumno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vQ3Vyc29cQXNpZ25hY2lvbkFsdW1uby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Alumno/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,8 +52,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bW5vXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Coloquio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3F1aW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Coloquio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3F1aW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Coloquio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3F1aW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Curso/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/DocenteCurso/AsignacionDocente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jZW50ZUN1cnNvXEFzaWduYWNpb25Eb2NlbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Docente/Create.cshtml]
@@ -66,6 +86,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Docente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jZW50ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Expediente/CrearExpediente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZWRpZW50ZVxDcmVhckV4cGVkaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Expediente/SeleccionarAlumno.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZWRpZW50ZVxTZWxlY2Npb25hckFsdW1uby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Documentos/GestionPosgradoFCC/gestorFcc/Views/Home/Index.cshtml]

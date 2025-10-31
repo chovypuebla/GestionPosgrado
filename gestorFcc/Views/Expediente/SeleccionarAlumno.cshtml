@@ -1,0 +1,24 @@
+﻿@model IEnumerable<gestorFcc.Data.Entidades.Alumno>
+
+@{
+    ViewData["Title"] = "Seleccionar expediente del alumno";
+}
+
+<h1>Seleccionar Alumno</h1>
+
+<form asp-action="SeleccionarAlumno" method="post">
+    <div class="form-group mb-3">
+        <label class="control-label">Seleccione un alumno</label>
+        <select name="matricula" class="form-control" required>
+            <option value="">Seleccione un alumno</option>
+            @foreach (var alumno in ViewBag.Alumno)
+            {
+                <option value="@alumno.Value">@alumno.Text</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Continuar a Subir Archivos</button>
+    <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Cancelar</a>
+
+</form>

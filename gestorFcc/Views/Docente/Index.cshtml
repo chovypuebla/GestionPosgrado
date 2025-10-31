@@ -6,6 +6,14 @@
 
 <h1>Lista de Docentes</h1>
 
+<!--Si el coordinador eliminó a un docente del sistema, lo regresa al menú y avisa en la parte superior izquierda-->
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
 <p>
     <a asp-action="Create" class="btn btn-success">Registrar Nuevo Docente</a>
 </p>

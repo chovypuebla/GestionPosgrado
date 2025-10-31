@@ -20,6 +20,10 @@ namespace gestorFcc.Data
         public DbSet<Coloquio> Coloquio { get; set; }
         public DbSet<Expediente> Expediente { get; set; }
 
+        public DbSet<AlumnoCurso> AlumnoCurso { get; set; }
+
+        public DbSet<DocenteCurso> DocenteCurso { get; set; }
+
         //configuraciones adicionales
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -10,7 +10,6 @@
     <Folder Include="Models\Entidades\" />
     <Folder Include="Models\Vista del Modelo\" />
     <Folder Include="Servicios\Interfaces\" />
-    <Folder Include="Views\Coloquio\" />
   </ItemGroup>
 
   <ItemGroup>

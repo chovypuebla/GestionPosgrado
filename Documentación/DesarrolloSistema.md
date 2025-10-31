@@ -16,6 +16,9 @@
     - [Estructura del Data](#estructura-del-data)
     - [Estructura de los Controladores](#estructura-de-los-controladores)
     - [Estructura de la Vista](#estructura-de-la-vista)
+    - [Controladores](#controladores)
+    - [Vista](#vista)
+    - [Validación de campos requeridos](#validación-de-campos-requeridos)
 
 ## 1.2. Objetivo del documento
 
@@ -199,6 +202,37 @@ Aquí un ejemplo:
 ![alt text](image-11.png)
 ![alt text](image-12.png)
 **Solo demostración**
+
+### Controladores
+
+Estos funcionan como la parte encargada de realizar las acciones del sistema, por el uso del método MVC se necesita dividir el trabajo en tres partes, esta es la segunda que toma tanto las propiedades del modelo y es necesario aplicar la lógica de operaciones, en este caso la mayoría son del uso de CRUD, crear, actualizar, eliminar y visualizar los datos que van a ir en la base de datos, con el uso de Entity Framework declarando su uso en la parte principal de los archivos **.cs** ofrece una estandarización de operaciones simples para solo que el desarrollador se enfoque en la estructura del negocio del sistema, es decir como la navegación se tiene que comportar en este caso, por cada tabla añadida en la base de datos, es indispensable hacer modelo y controlador para tener control y reconocer el funcionamiento de lo que esta realizando.
+
+Hay que tomar en cuenta que los métodos de mandar y recibir información los entiende el framework pero hay que mencionarlo en la parte superior del método que se va a añadir en el archivo programable, los get no es necesario indicar el propio entiende que son los que van a mandar la información al servidor y los post si deben ser especificados.
+
+Es importante porque en la vista del sistema es decir la interfaz de usuario estos con el uso de html se indica en los formularios si es por tipo post o get, entonces en la estructura del programa puedes darte cuenta para que sirven cada uno.
+
+Así como también en que vista vas a retornar, aquí entiende por un solo modelo pero puedes indicar regresar al main o página principal de un modelo diferente solo indicando en los parantesís del **return View();**
+
+Este es obligatorio que hayas terminado por completo el mapeo del modelo, es decir que tienes todos los datos instanciados y listos para trabajar en el controlador
+
+![alt text](image-13.png)
+![alt text](image-14.png)
+
+Es recomendable que si creas formularios para que el usuario añada información es aquí en el controlador en donde inicialices los datos en 0 o con una sentencia de que el dato no fue asignado
+
+### Vista
+
+Es la tercera parte en el que se tiene que trabajar, aquí es donde la parte del controlador ya debe estar resulta y no presenta errores al momento de manejar los datos y las propiedades del modelo, en Visual Studio utiliza el uso C# pero casi con pequeñas similitudes con PHP, aquí se puede usar tanto el propio C# puro como tal y en las etiquetas html puedes identificar por metodos asp, gracias al uso de entity o que condiciones algunos mensajes en casos especiales si se han borrado registros del sistema y necesitan moverse o las demanadas que pida el cliente en ese momento.
+
+La sugerencia es la misma y es utilizar las vistas de acuerdo al modelo que se esta trabajando ya que puede ser indispensable para desplegar información que usar la entidad y desplegar en lista o en tablas todos los alumnos.
+
+Cuidar la dirección de donde esta ubicada la ventana, aquí la recomendación es que pueda persistir que la base de datos pueda incluir nuevas relaciones o el uso de llaves fornaeas nuevas, entonces es indispensable tener presente la lógica de negocio a presentar para que en este caso no presentar problemas.
+
+Tambien en Home no cofundir el Index principal de otros más, es por ello que los métodos del controlador puedes llamarlos aquí con el uso de las etiquetas input, p , a o de un botón, o solo llamar a la acción ASP.NET entiende que si llamas al método como tal debes crear una ventana para eso mismo, pero en caso de que se trata eliminar información es tu acción entonces en el controlador debes inidicar que solo llamas a la acción después de guardar los cambios o hacer el **submit** y regresar a la ventana que desees, lo puedes ver de ejemplo en la entidad **Docente** tanto su controlador como en la vista **Delete**, la vista llamada a la acción no al método, para evitar que el sistema lo guié a otra pantalla.
+
+
+### Validación de campos requeridos
+
 
 
 

@@ -11,6 +11,8 @@
                 <h5 class="card-title">Alumnos</h5>
                 <p class="card-text">Gestionar estudiantes</p>
                 <a href="/Alumno/Index" class="btn btn-primary">Gestionar</a>
+                <a asp-controller="Expediente" asp-action="SeleccionarAlumno" class="btn btn-primary">Crear Expediente</a>           
+                <a asp-controller="AlumnoCurso" asp-action="AsignarCurso" class="btn btn-primary">Asignar Cursos</a>
             </div>
         </div>
     </div>
@@ -21,6 +23,7 @@
                 <h5 class="card-title">Profesores</h5>
                 <p class="card-text">Gestionar profesores</p>
                 <a href="/Docente/Index" class="btn btn-primary">Gestionar</a>
+                <a asp-controller="DocenteCurso" asp-action="AsignacionDocente" class="btn btn-primary">Asignar Cursos</a>
             </div>
         </div>
     </div>
@@ -40,7 +43,18 @@
             <div class="card-body">
                 <h5 class="card-title">Coloquios</h5>
                 <p class="card-text">Eventos académicos</p>
-                <a href="/Coloquio" class="btn btn-primary">Gestionar</a>
+                <a href="/Coloquio/Index" class="btn btn-primary">Gestionar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Información </h5>
+                <p class="card-text">Exportar o Imprimir Información</p>
+                <a href="/Coloquio/Exportar" class="btn btn-primary">Exportar</a>
+                <a href="/Coloquio/Imprimir" class="btn btn-primary">Imprimir</a>
             </div>
         </div>
     </div>

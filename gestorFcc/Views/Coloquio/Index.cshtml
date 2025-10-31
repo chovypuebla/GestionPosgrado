@@ -1,0 +1,47 @@
+﻿@model IEnumerable<gestorFcc.Data.Entidades.Coloquio>
+
+@{
+    ViewData["Title"] = "Lista de Coloquios";
+}
+
+<h1>Lista de Coloquios</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Registrar Nuevo Coloquio</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Fecha</th>
+            <th>Lugar</th>
+            <th>Hora</th>
+            <th>Fecha de Registro</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id_coloquio</td>
+                <td>@item.titulo</td>
+                <td>@(item.fecha?.ToString("dd/MM/yyyy") ?? "N/A")</td>
+                <td>@item.lugar</td>
+                <td>@(item.hora?.ToString(@"hh\:mm") ?? "N/A")</td>
+                <td>@(item.fechaRegistro?.ToString("dd/MM/yyyy") ?? "N/A")</td>
+                <td><a asp-action="Edit" asp-route-id="@item.id_coloquio" class="btn btn-warning btn-sm">Actualizar</a></td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+@if (!Model.Any())
+{
+    <div class="alert alert-info" role="alert">
+        No hay coloquios registrados en el sistema.
+    </div>
+}

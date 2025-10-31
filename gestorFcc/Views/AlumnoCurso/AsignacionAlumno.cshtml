@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Asignar Curso a Alumno";
+}
+
+<h1> Asignar Curso a Alumno</h1>
+
+<form asp-action="AsignarCurso" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="control-label">Seleccionar Alumno</label>
+                <select name="matricula" class="form-control" required>
+                    <option value=""> Selecciona alumno </option>
+                    @foreach (var alumno in ViewBag.Alumno)
+                    {
+                        <option value="@alumno.matricula">@alumno.matricula - @alumno.nombre - @alumno.apellidoPaterno</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label class="control-label">Seleccionar Curso</label>
+                <select name="id_curso" class="form-control" required>
+                    <option value=""> Seleccione Curso </option>
+                    @foreach (var curso in ViewBag.Curso)
+                    {
+                        <option value="@curso.id_curso">@curso.id_curso - @curso.nombre</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="control-label">Periodo:</label>
+        <input type="text" name="periodo" class="form-control" placeholder="Otoño / Primavera"  required/>
+    </div>
+
+    <button type="submit" class="btn btn-primary"> Asignar Curso</button>
+    <a asp-action="Index" class="btn btn-secondary">Ver Asignaciones</a>
+
+</form>

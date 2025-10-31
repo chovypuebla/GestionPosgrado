@@ -35,7 +35,7 @@
         <dd class="col-sm-9">@Model.celular</dd>
     </dl>
 
-    <form asp-action="DeleteConfirmed" method="post">
+    <form asp-action="Delete" method="post">
         <input type="hidden" asp-for="id_docente" />
         <button type="submit" class="btn btn-danger">Si, Eliminar</button>
         <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
