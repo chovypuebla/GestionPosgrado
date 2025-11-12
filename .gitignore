@@ -1,5 +1,6 @@
 appsettings.Development.json
 appsettings.Local.json
+appsettings.json
 
 # Build results
 bin/
