@@ -176,3 +176,4 @@ F:\Documentos\GestionPosgradoFCC\gestorFcc\obj\Debug\net8.0\refint\gestorFcc.dll
 F:\Documentos\GestionPosgradoFCC\gestorFcc\obj\Debug\net8.0\gestorFcc.pdb
 F:\Documentos\GestionPosgradoFCC\gestorFcc\obj\Debug\net8.0\gestorFcc.genruntimeconfig.cache
 F:\Documentos\GestionPosgradoFCC\gestorFcc\obj\Debug\net8.0\ref\gestorFcc.dll
+F:\Documentos\GestionPosgradoFCC\gestorFcc\bin\Debug\net8.0\libman.json

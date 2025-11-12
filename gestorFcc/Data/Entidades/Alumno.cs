@@ -38,7 +38,7 @@ namespace gestorFcc.Data.Entidades
         [EmailAddress (ErrorMessage = "Correo Electrónico no válido")]
         [Required (ErrorMessage = "El correo es obligatorio")]
         public string? correo { get; set; }
-        
+
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? fechaRegistro { get; set; }
 

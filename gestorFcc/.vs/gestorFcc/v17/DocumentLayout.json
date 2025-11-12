@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\alumnocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\alumnocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\cursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\cursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\docentecursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\docentecursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\alumnocursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\alumnocursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\coloquiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\coloquiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\expedientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\expedientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\data\\entidades\\docentecurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:data\\entidades\\docentecurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\views\\alumnocurso\\asignaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:views\\alumnocurso\\asignaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\data\\entidades\\alumnocurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:data\\entidades\\alumnocurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\views\\docentecurso\\asignaciondocente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:views\\docentecurso\\asignaciondocente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\views\\alumno\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:views\\alumno\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\views\\alumnocurso\\asignacionalumno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:views\\alumnocurso\\asignacionalumno.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\alumnocursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\alumnocursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\docentecursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\docentecursocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|f:\\documentos\\gestionposgradofcc\\gestorfcc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E333F12B-2B20-4C9D-A1C8-3DBFA1E3346B}|gestorFcc.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,58 +59,123 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AlumnoController.cs",
-              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\AlumnoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AlumnoController.cs",
-              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\AlumnoController.cs",
-              "RelativeToolTip": "Controllers\\AlumnoController.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T04:23:03.613Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-12T03:21:28.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T02:26:41.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T02:26:26.114Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ColoquioController.cs",
-              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\ColoquioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ColoquioController.cs",
-              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\ColoquioController.cs",
-              "RelativeToolTip": "Controllers\\ColoquioController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Title": "AsignacionDocente.cshtml",
+              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\DocenteCurso\\AsignacionDocente.cshtml",
+              "RelativeDocumentMoniker": "Views\\DocenteCurso\\AsignacionDocente.cshtml",
+              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\DocenteCurso\\AsignacionDocente.cshtml",
+              "RelativeToolTip": "Views\\DocenteCurso\\AsignacionDocente.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T03:21:19.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AlumnoCurso.cs",
+              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Data\\Entidades\\AlumnoCurso.cs",
+              "RelativeDocumentMoniker": "Data\\Entidades\\AlumnoCurso.cs",
+              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Data\\Entidades\\AlumnoCurso.cs",
+              "RelativeToolTip": "Data\\Entidades\\AlumnoCurso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T04:08:54.606Z",
+              "WhenOpened": "2025-11-11T03:07:58.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\Alumno\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Alumno\\Index.cshtml",
+              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\Alumno\\Index.cshtml",
+              "RelativeToolTip": "Views\\Alumno\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T03:04:28.105Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Asignaciones.cshtml",
+              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\AlumnoCurso\\Asignaciones.cshtml",
+              "RelativeDocumentMoniker": "Views\\AlumnoCurso\\Asignaciones.cshtml",
+              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\AlumnoCurso\\Asignaciones.cshtml",
+              "RelativeToolTip": "Views\\AlumnoCurso\\Asignaciones.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwCIAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T02:59:04.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AsignacionAlumno.cshtml",
+              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\AlumnoCurso\\AsignacionAlumno.cshtml",
+              "RelativeDocumentMoniker": "Views\\AlumnoCurso\\AsignacionAlumno.cshtml",
+              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\AlumnoCurso\\AsignacionAlumno.cshtml",
+              "RelativeToolTip": "Views\\AlumnoCurso\\AsignacionAlumno.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T02:43:04.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AlumnoCursoController.cs",
               "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\AlumnoCursoController.cs",
               "RelativeDocumentMoniker": "Controllers\\AlumnoCursoController.cs",
               "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\AlumnoCursoController.cs",
               "RelativeToolTip": "Controllers\\AlumnoCursoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwEoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T04:03:53.693Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CursoController.cs",
-              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\CursoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CursoController.cs",
-              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\CursoController.cs",
-              "RelativeToolTip": "Controllers\\CursoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T04:03:52.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "DocenteCursoController.cs",
               "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\DocenteCursoController.cs",
               "RelativeDocumentMoniker": "Controllers\\DocenteCursoController.cs",
@@ -119,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "HomeController.cs",
               "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -128,58 +197,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T04:03:50.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ExpedienteController.cs",
-              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\ExpedienteController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ExpedienteController.cs",
-              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Controllers\\ExpedienteController.cs",
-              "RelativeToolTip": "Controllers\\ExpedienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T03:58:55.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\Alumno\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Alumno\\Index.cshtml",
-              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\Alumno\\Index.cshtml",
-              "RelativeToolTip": "Views\\Alumno\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-31T03:47:14.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DocenteCurso.cs",
-              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Data\\Entidades\\DocenteCurso.cs",
-              "RelativeDocumentMoniker": "Data\\Entidades\\DocenteCurso.cs",
-              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Data\\Entidades\\DocenteCurso.cs",
-              "RelativeToolTip": "Data\\Entidades\\DocenteCurso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T03:37:35.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AlumnoCurso.cs",
-              "DocumentMoniker": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Data\\Entidades\\AlumnoCurso.cs",
-              "RelativeDocumentMoniker": "Data\\Entidades\\AlumnoCurso.cs",
-              "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Data\\Entidades\\AlumnoCurso.cs",
-              "RelativeToolTip": "Data\\Entidades\\AlumnoCurso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T03:37:34.112Z",
               "EditorCaption": ""
             }
           ]

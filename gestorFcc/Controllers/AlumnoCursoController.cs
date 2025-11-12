@@ -37,6 +37,7 @@ namespace gestorFcc.Controllers
             {
                 var asignacion = new AlumnoCurso
                 {
+                    
                     matricula = matricula,
                     id_curso = id_curso,
                     periodo = periodo,
@@ -58,7 +59,21 @@ namespace gestorFcc.Controllers
 
         public async Task<IActionResult> Asignaciones()
         {
-            var asignaciones = await _context.AlumnoCurso.ToListAsync();
+            var asignaciones = await (from ac in _context.AlumnoCurso
+                                      join a in _context.Alumno on ac.matricula equals a.matricula into gj
+                                      from a in gj.DefaultIfEmpty()
+                                      select new AlumnoCurso
+                                      {
+                                          id = ac.id,
+                                          matricula = ac.matricula,
+                                          id_curso = ac.id_curso,
+                                          periodo = ac.periodo,
+                                          fechaAsignacion = ac.fechaAsignacion,
+                                          nombre = a != null ? a.nombre : null,
+                                          apellidoPaterno = a != null ? a.apellidoPaterno : null,
+                                          apellidoMaterno = a != null ? a.apellidoMaterno : null
+                                      }).ToListAsync();
+
             return View(asignaciones);
         }
 

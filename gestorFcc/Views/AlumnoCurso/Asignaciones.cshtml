@@ -1,0 +1,35 @@
+@model IEnumerable<gestorFcc.Data.Entidades.AlumnoCurso>
+
+@{
+    ViewData["Title"] = "Asignaciones de Cursos";
+}
+
+<h1>Asignaciones</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Matrícula</th>
+            <th>Nombre</th>
+            <th>Curso</th>
+            <th>Periodo</th>
+            <th>Fecha Asignación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@a.matricula</td>
+                <td>@($"{a.nombre ?? ""} {a.apellidoPaterno ?? ""} {a.apellidoMaterno ?? ""}".Trim())</td>
+                <td>@a.id_curso</td>
+                <td>@a.periodo</td>
+                <td>@(a.fechaAsignacion?.ToString("dd/MM/yyyy") ?? "-")</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Alumno" asp-action="Index" class="btn btn-secondary">Volver a Lista de Alumnos</a>
+<a asp-action="AsignarCurso" class="btn btn-primary">Nueva Asignación</a>
