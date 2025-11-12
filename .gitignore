@@ -1,0 +1,13 @@
+appsettings.Development.json
+appsettings.Local.json
+
+# Build results
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
