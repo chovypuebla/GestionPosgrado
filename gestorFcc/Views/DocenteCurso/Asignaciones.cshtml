@@ -1,0 +1,34 @@
+﻿@model IEnumerable<gestorFcc.Models.DocenteCursoViewModel>
+
+@{
+    ViewData["Title"] = "Asignaciones de Cursos en Docentes";
+}
+
+<h1>📚 Asignaciones de Cursos a Docentes</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID Docente</th>
+            <th>Nombre del Docente</th>
+            <th>Curso</th>
+            <th>Periodo</th>
+            <th>Fecha Asignación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@(a.IdDocente ?? "-")</td>
+                <td>@(string.IsNullOrWhiteSpace(a.NombreDocente) ? "-" : a.NombreDocente)</td>
+                <td>@(a.IdCurso ?? "-") - @(a.NombreCurso ?? "-")</td>
+                <td>@(a.Periodo ?? "-")</td>
+                <td>@(a.FechaAsignacion?.ToString("dd/MM/yyyy") ?? "-")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Docente" asp-action="Index" class="btn btn-secondary">Volver a Lista de Docentes</a>
+<a asp-action="AsignarCurso" class="btn btn-primary">Nueva asignación curso</a>
