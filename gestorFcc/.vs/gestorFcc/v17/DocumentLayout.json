@@ -42,8 +42,7 @@
               "RelativeToolTip": "Models\\DocenteCursoViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T05:38:22.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-14T05:38:22.139Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "Data\\Entidades\\DocenteCurso.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T04:33:59.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-14T04:33:59.011Z"
             },
             {
               "$type": "Document",
@@ -66,7 +64,7 @@
               "RelativeDocumentMoniker": "Views\\DocenteCurso\\Asignaciones.cshtml",
               "ToolTip": "F:\\Documentos\\GestionPosgradoFCC\\gestorFcc\\Views\\DocenteCurso\\Asignaciones.cshtml",
               "RelativeToolTip": "Views\\DocenteCurso\\Asignaciones.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-14T04:21:41.472Z",
               "EditorCaption": ""
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Controllers\\DocenteCursoController.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAUwFUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T04:03:52.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T04:03:52.195Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Views\\DocenteCurso\\AsignacionDocente.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-11T03:21:19.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T03:21:19.254Z"
             }
           ]
         }

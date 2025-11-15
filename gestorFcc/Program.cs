@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using gestorFcc.Data;
+using gestorFcc.Servicios;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,7 @@ builder.Services.AddDbContext<ContextoAplicacionBD>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<ExcelExportarServicio>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
