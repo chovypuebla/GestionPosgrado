@@ -1,0 +1,197 @@
+﻿@model gestorFcc.Models.PrintViewModel
+
+@{
+    Layout = null;
+}
+
+<title>Reporte Completo</title>
+
+<meta charset="utf-8" />
+
+<body>
+    <div class=" no-print">
+        <button onclick="window.print()" class="btn btn-primary">Imprimir</button>
+        <button onclick="window.close()" class="btn btn-secondary">Cerrar</button>
+        <span>
+            Vista optimizada, use el botón de imprimir para generar el reporte
+        </span>
+    </div>
+
+    <div class="header">
+        <h1>Sistema Gestión Posgrado</h1>
+        <h2>Reporte Completo del Sistema</h2>
+        <p><strong>Fecha de generación</strong> @Model.FechaGeneracion.ToString("dd/MM/yyyy HH:mm")</p>
+    </div>
+    
+    <!--Seccion de alumnos-->
+    <div class="section">
+        <div class="section-title">
+            <h3 style="margin: 0;">Alumnos registrados</h3>
+        </div>
+        @if (Model.Alumno.Any())
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var alumno in Model.Alumno)
+                    {
+                        <tr>
+                            <td>@alumno.matricula</td>
+                            <td>@alumno.nombre</td>
+                            <td>@alumno.correo</td>
+                            <td>@alumno.celular</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p><strong>Total alumnos registrados:</strong>@Model.Alumno.Count</p>
+        }
+        else
+        {
+            <p>No hay alumnos registrados en el sistema.</p>
+
+        }
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--Docente-->
+
+    <div class="section">
+        <div class="section-title">
+            <h3 style="margin: 0;">Docentes registrados</h3>
+        </div>
+        @if (Model.Docente.Any())
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Docente</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var docente in Model.Docente)
+                    {
+                        <tr>
+                            <td>@docente.id_docente</td>
+                            <td>@docente.nombre</td>
+                            <td>@docente.correoBuap</td>
+                            <td>@docente.celular</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p><strong>Total docentes registrados:</strong> @Model.Docente.Count</p>
+        }
+        else
+        {
+            <p>No hay docentes registrados en el sistema.</p>
+        }
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--Cursos-->
+    <div class="section">
+        <div class="section-title">
+            <h3 style="margin: 0;">Cursos registrados</h3>
+        </div>
+        @if (Model.Curso.Any())
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Curso</th>
+                        <th>Nombre del Curso</th>
+                        <th>Periodo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var curso in Model.Curso)
+                    {
+                        <tr>
+                            <td>@curso.id_curso</td>
+                            <td>@curso.nombre</td>
+                            <td>@curso.periodo</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p><strong>Total cursos registrados:</strong> @Model.Curso.Count</p>
+        }
+        else
+        {
+            <p>No hay cursos registrados en el sistema.</p>
+        }
+    </div>
+
+    <div class="page-break"></div>
+
+    <!--Coloquios-->
+
+    <div class="section">
+        <div class="section-title">
+            <h3 style="margin: 0;">Coloquios registrados</h3>
+        </div>
+        @if (Model.Coloquio.Any())
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Coloquio</th>
+                        <th>Título</th>
+                        <th>Fecha</th>
+                        <th>Lugar</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var coloquio in Model.Coloquio)
+                    {
+                        <tr>
+                            <td>@coloquio.id_coloquio</td>
+                            <td>@coloquio.titulo</td>
+                            <td>@(coloquio.fecha?.ToString("dd/MM/yyyy") ?? "N/A")</td>
+                            <td>@coloquio.lugar</td>
+                            <td>@(coloquio.hora?.ToString(@"hh\:mm") ?? "N/A")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p><strong>Total coloquios registrados:</strong> @Model.Coloquio.Count</p>
+        }
+        else
+        {
+            <p>No hay coloquios registrados en el sistema.</p>
+        }
+    </div>
+
+    <div class="section" style="margin-top: 50px; text-align: center; border-top: 1px solid #dee2e6; padding-top: 20px;">
+        <p><strong>Reporte generado automáticamente por el Sistema de Gestión de Posgrado</strong></p>
+        <p>Página <span id="page-number"></span></p>
+    </div>
+
+    <script>
+        // Numeración de páginas
+        document.addEventListener('DOMContentLoaded', function() {
+            var pages = document.querySelectorAll('body > div:not(.no-print)');
+            pages.forEach(function(page, index) {
+                var pageNumber = page.querySelector('#page-number');
+                if (pageNumber) {
+                    pageNumber.textContent = (index + 1);
+                }
+            });
+        });
+    </script>
+
+</body>

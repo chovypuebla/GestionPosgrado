@@ -21,7 +21,7 @@ namespace gestorFcc.Controllers
             try
             {
                 var excelData = _exportService.ExportarTodosDatos();
-                var fileName = $"Backup_Completo_{DateTime.Now:yyyyMMdd_HHmmss}.xls";
+                var fileName = $"Backup_Completo_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
                 return File(excelData, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
             }
             catch (Exception ex)

@@ -52,9 +52,9 @@
         <div class="card text-center">
             <div class="card-body">
                 <h5 class="card-title">Información </h5>
-                <p class="card-text">Exportar o Imprimir Información</p>
-                <a href="/Coloquio/Exportar" class="btn btn-primary">Exportar</a>
-                <a href="/Coloquio/Imprimir" class="btn btn-primary">Imprimir</a>
+                <p class="card-text">Descargar Información formato Excel</p>
+                <a href="@Url.Action("ExportarExcel", "Exportar")" class="btn btn-success">Exportar a Excel</a>
+                <a href="@Url.Action("Index","Imprimir")" class="btn btn-primary">Imprimir Reporte</a>
             </div>
         </div>
     </div>
