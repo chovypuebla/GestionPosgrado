@@ -12,7 +12,7 @@ using gestorFcc.Data;
 namespace gestorFcc.Migrations
 {
     [DbContext(typeof(ContextoAplicacionBD))]
-    [Migration("20251031033605_InitialCreate")]
+    [Migration("20251119055815_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -80,6 +80,14 @@ namespace gestorFcc.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<string>("apellidoMaterno")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("apellidoPaterno")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("fechaAsignacion")
                         .HasColumnType("datetime2");
 
@@ -91,6 +99,10 @@ namespace gestorFcc.Migrations
                         .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("periodo")
                         .IsRequired()
@@ -250,16 +262,12 @@ namespace gestorFcc.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("id_curso")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("id_docente")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("periodo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

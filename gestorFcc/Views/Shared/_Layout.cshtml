@@ -1,4 +1,22 @@
 ﻿<!DOCTYPE html>
+
+<!-- Mensajes temporales para debugging -->
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+        <strong>Error:</strong> @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
+        <strong>Éxito:</strong> @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
 <html lang="es">
 <head>
     <meta charset="utf-8" />

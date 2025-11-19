@@ -1,5 +1,4 @@
 ﻿using ClosedXML.Excel;
-using gestorFcc.Models;
 using gestorFcc.Data.Entidades;
 using gestorFcc.Data;
 using Microsoft.EntityFrameworkCore;
@@ -19,52 +18,100 @@ namespace gestorFcc.Servicios
         {
             using (var wb = new XLWorkbook())
             {
-                //Alumnos
-                var alumno = _context.Alumno.ToList();
-                if (alumno.Any())
+                // Alumnos
+                var alumnos = _context.Alumno.ToList();
+                if (alumnos.Any())
                 {
                     var ws = wb.Worksheets.Add("Alumnos");
-                    AddTableToWorkSheet(ws, alumno, "Lista Alumno");
+                    ws.Cell(1, 1).Value = "Matrícula";
+                    ws.Cell(1, 2).Value = "Nombre";
+                    ws.Cell(1, 3).Value = "Apellido Paterno";
+                    ws.Cell(1, 4).Value = "Apellido Materno";
+                    ws.Cell(1, 5).Value = "Email";
+                    ws.Cell(1, 6).Value = "Teléfono";
+
+                    int row = 2;
+                    foreach (var alumno in alumnos)
+                    {
+                        ws.Cell(row, 1).Value = alumno.matricula;
+                        ws.Cell(row, 2).Value = alumno.nombre;
+                        ws.Cell(row, 3).Value = alumno.apellidoPaterno;
+                        ws.Cell(row, 4).Value = alumno.apellidoMaterno;
+                        ws.Cell(row, 5).Value = alumno.correo;
+                        ws.Cell(row, 6).Value = alumno.celular;
+                        row++;
+                    }
+                    ws.Columns().AdjustToContents();
                 }
 
-                //docente
-                var docente = _context.Docente.ToList();
-                if (docente.Any())
+                // Docentes
+                var docentes = _context.Docente.ToList();
+                if (docentes.Any())
                 {
                     var ws = wb.Worksheets.Add("Docentes");
-                    AddTableToWorkSheet(ws, docente, "Lista Docente");
+                    ws.Cell(1, 1).Value = "ID Docente";
+                    ws.Cell(1, 2).Value = "Nombre";
+                    ws.Cell(1, 3).Value = "Apellido Paterno";
+                    ws.Cell(1, 4).Value = "Apellido Materno";
+                    ws.Cell(1, 5).Value = "Email";
+                    ws.Cell(1, 6).Value = "Teléfono";
+
+                    int row = 2;
+                    foreach (var docente in docentes)
+                    {
+                        ws.Cell(row, 1).Value = docente.id_docente;
+                        ws.Cell(row, 2).Value = docente.nombre;
+                        ws.Cell(row, 3).Value = docente.apellidoPaterno;
+                        ws.Cell(row, 4).Value = docente.apellidoMaterno;
+                        ws.Cell(row, 5).Value = docente.correoBuap;
+                        ws.Cell(row, 6).Value = docente.celular;
+                        row++;
+                    }
+                    ws.Columns().AdjustToContents();
                 }
 
-                //curso
-                var curso = _context.Curso.ToList();
-                if (curso.Any())
+                // Cursos
+                var cursos = _context.Curso.ToList();
+                if (cursos.Any())
                 {
                     var ws = wb.Worksheets.Add("Cursos");
-                    AddTableToWorkSheet(ws, curso, "Lista Curso");
+                    ws.Cell(1, 1).Value = "ID Curso";
+                    ws.Cell(1, 2).Value = "Nombre";
+                    ws.Cell(1, 3).Value = "Periodo";
+
+                    int row = 2;
+                    foreach (var curso in cursos)
+                    {
+                        ws.Cell(row, 1).Value = curso.id_curso;
+                        ws.Cell(row, 2).Value = curso.nombre;
+                        ws.Cell(row, 3).Value = curso.periodo;
+                        row++;
+                    }
+                    ws.Columns().AdjustToContents();
                 }
 
-                //alumnoCurso
-                var alumnoCurso = _context.AlumnoCurso.ToList();
-                if (alumnoCurso.Any())
-                {
-                    var ws = wb.Worksheets.Add("AlumnoCursos");
-                    AddTableToWorkSheet(ws, alumnoCurso, "Lista AlumnoCurso");
-                }
-
-                //coloquio
-                var coloquio = _context.Coloquio.ToList();
-                if (coloquio.Any())
+                // Coloquios
+                var coloquios = _context.Coloquio.ToList();
+                if (coloquios.Any())
                 {
                     var ws = wb.Worksheets.Add("Coloquios");
-                    AddTableToWorkSheet(ws, coloquio, "Lista Coloquio");
-                }
+                    ws.Cell(1, 1).Value = "ID Coloquio";
+                    ws.Cell(1, 2).Value = "Título";
+                    ws.Cell(1, 3).Value = "Fecha";
+                    ws.Cell(1, 4).Value = "Lugar";
+                    ws.Cell(1, 5).Value = "Hora";
 
-                //docenteCurso
-                var docenteCurso = _context.DocenteCurso.ToList();
-                if (docenteCurso.Any())
-                {
-                    var ws = wb.Worksheets.Add("DocenteCursos");
-                    AddTableToWorkSheet(ws, docenteCurso, "Lista DocenteCurso");
+                    int row = 2;
+                    foreach (var coloquio in coloquios)
+                    {
+                        ws.Cell(row, 1).Value = coloquio.id_coloquio;
+                        ws.Cell(row, 2).Value = coloquio.titulo;
+                        ws.Cell(row, 3).Value = coloquio.fecha?.ToString("dd/MM/yyyy");
+                        ws.Cell(row, 4).Value = coloquio.lugar;
+                        ws.Cell(row, 5).Value = coloquio.hora?.ToString();
+                        row++;
+                    }
+                    ws.Columns().AdjustToContents();
                 }
 
                 using (var stream = new MemoryStream())
@@ -74,63 +121,5 @@ namespace gestorFcc.Servicios
                 }
             }
         }
-
-        private void AddTableToWorkSheet<T> (IXLWorksheet wb, List<T> data, string titulo)
-        {
-            wb.Cell(1, 1).Value = titulo;
-            wb.Cell(1,1).Style.Font.Bold = true;
-            wb.Cell(1,1).Style.Font.FontSize = 14;
-
-            //propiedades de la entidad
-            var propiedades = typeof(T).GetProperties();
-
-            //encabezados
-            int row = 3;
-            for (int col = 0; col < propiedades.Length; col++) 
-            {
-                wb.Cell(row, col + 1).Value = GetDisplayName(propiedades[col]);
-                wb.Cell(row, col + 1).Style.Font.Bold = true;
-                wb.Cell(row, col + 1).Style.Fill.BackgroundColor = XLColor.LightGray;
-            }
-
-            row++;
-            foreach (var item in data) {
-                for (int col = 0; col < propiedades.Length; col++) 
-                {
-                    var valor = propiedades[col].GetValue(item);
-                    wb.Cell(row, col + 1).Value = valor != null ? valor?.ToString() : "";
-                }
-                row++;
-            }
-
-            //ajustar columnas
-            wb.Columns().AdjustToContents();
-
-        }
-
-        private string GetDisplayName(System.Reflection.PropertyInfo property) 
-        {
-            var displayName = property.Name switch
-            {
-                "id" => "ID",
-                "id_curso" => "ID Curso",
-                "id_docente" => "ID Docente",
-                "id_alumno" => "ID Alumno",
-                "nombre" => "Nombre",
-                "apellido" => "Apellido",
-                "email" => "Email",
-                "telefono" => "Teléfono",
-                "fechaRegistro" => "Fecha de Registro",
-                "periodo" => "Periodo",
-                "fechaAsignacion" => "Fecha de Asignación",
-                "titulo" => "Título",
-                "descripcion" => "Descripción",
-                "fechaColoquio" => "Fecha del Coloquio",
-                _ => property.Name
-            };
-            return displayName;
-
-        }
-
     }
 }
