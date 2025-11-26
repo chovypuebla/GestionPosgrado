@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gestorFcc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8290a63d272e399f153497b50802e08c4a6e9fc4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c10dd0717603491a771fa3dcef7f8ad06027250c")]
 [assembly: System.Reflection.AssemblyProductAttribute("gestorFcc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gestorFcc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,62 +1,101 @@
 ﻿@{
     ViewData["Title"] = "Dashboard";
 }
-<h1>Dashboard Principal</h1>
+
+<h1 class="mb-4 fw-bold">Dashboard Principal</h1>
 <p class="lead">@ViewBag.Mensaje</p>
 
-<div class="row mt-4">
-    <div class="col-md-3 mb-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Alumnos</h5>
-                <p class="card-text">Gestionar estudiantes</p>
-                <a href="/Alumno/Index" class="btn btn-primary">Gestionar</a>
-                <a asp-controller="Expediente" asp-action="SeleccionarAlumno" class="btn btn-primary">Crear Expediente</a>           
-                <a asp-controller="AlumnoCurso" asp-action="AsignarCurso" class="btn btn-primary">Asignar Cursos</a>
+<div class="row g-4 mt-2">
+
+    <!-- CARD: Alumnos -->
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 dashboard-card text-center p-3">
+            <div class="card-icon text-primary mb-3">
+                <i class="bi bi-people-fill" style="font-size: 45px;"></i>
+            </div>
+            <h5 class="fw-bold">Alumnos</h5>
+            <p class="text-muted">Gestión de estudiantes</p>
+
+            <div class="d-grid gap-2 mt-3">
+                <a href="/Alumno/Index" class="btn btn-outline-primary btn-sm">Gestionar</a>
+                <a asp-controller="Expediente" asp-action="SeleccionarAlumno" class="btn btn-outline-primary btn-sm">Crear Expediente</a>
+                <a asp-controller="AlumnoCurso" asp-action="AsignarCurso" class="btn btn-outline-primary btn-sm">Asignar Cursos</a>
             </div>
         </div>
     </div>
 
-    <div class="col-md-3 mb-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Profesores</h5>
-                <p class="card-text">Gestionar profesores</p>
-                <a href="/Docente/Index" class="btn btn-primary">Gestionar</a>
-                <a asp-controller="DocenteCurso" asp-action="AsignarCurso" class="btn btn-primary">Asignar Cursos</a>
+    <!-- CARD: Profesores -->
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 dashboard-card text-center p-3">
+            <div class="card-icon text-success mb-3">
+                <i class="bi bi-person-badge-fill" style="font-size: 45px;"></i>
+            </div>
+            <h5 class="fw-bold">Profesores</h5>
+            <p class="text-muted">Gestión docente</p>
+
+            <div class="d-grid gap-2 mt-3">
+                <a href="/Docente/Index" class="btn btn-outline-success btn-sm">Gestionar</a>
+                <a asp-controller="DocenteCurso" asp-action="AsignarCurso" class="btn btn-outline-success btn-sm">Asignar Cursos</a>
             </div>
         </div>
     </div>
 
-    <div class="col-md-3 mb-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Cursos</h5>
-                <p class="card-text">Gestionar materias</p>
-                <a href="/Curso/Index" class="btn btn-primary">Gestionar</a>
+    <!-- CARD: Cursos -->
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 dashboard-card text-center p-3">
+            <div class="card-icon text-warning mb-3">
+                <i class="bi bi-journal-bookmark-fill" style="font-size: 45px;"></i>
+            </div>
+            <h5 class="fw-bold">Cursos</h5>
+            <p class="text-muted">Gestión de materias</p>
+
+            <div class="d-grid gap-2 mt-3">
+                <a href="/Curso/Index" class="btn btn-outline-warning btn-sm text-dark">Gestionar</a>
             </div>
         </div>
     </div>
 
-    <div class="col-md-3 mb-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Coloquios</h5>
-                <p class="card-text">Eventos académicos</p>
-                <a href="/Coloquio/Index" class="btn btn-primary">Gestionar</a>
+    <!-- CARD: Coloquios -->
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 dashboard-card text-center p-3">
+            <div class="card-icon text-info mb-3">
+                <i class="bi bi-easel-fill" style="font-size: 45px;"></i>
+            </div>
+            <h5 class="fw-bold">Coloquios</h5>
+            <p class="text-muted">Eventos académicos</p>
+
+            <div class="d-grid gap-2 mt-3">
+                <a href="/Coloquio/Index" class="btn btn-outline-info btn-sm">Gestionar</a>
             </div>
         </div>
     </div>
 
-    <div class="col-md-3 mb-3">
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Información </h5>
-                <p class="card-text">Descargar Información formato Excel</p>
-                <a href="@Url.Action("ExportarExcel", "Exportar")" class="btn btn-success">Exportar a Excel</a>
-                <a href="@Url.Action("Index","Imprimir")" class="btn btn-primary">Imprimir Reporte</a>
+    <!-- CARD: Información -->
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 dashboard-card text-center p-3">
+            <div class="card-icon text-dark mb-3">
+                <i class="bi bi-file-earmark-bar-graph-fill" style="font-size: 45px;"></i>
+            </div>
+            <h5 class="fw-bold">Información</h5>
+            <p class="text-muted">Descargar y visualizar datos</p>
+
+            <div class="d-grid gap-2 mt-3">
+                <a href="@Url.Action("ExportarExcel", "Exportar")" class="btn btn-success btn-sm">Exportar a Excel</a>
+                <a href="@Url.Action("Index", "Imprimir")" class="btn btn-primary btn-sm">Imprimir Reporte</a>
             </div>
         </div>
     </div>
 
 </div>
+
+<style>
+    .dashboard-card {
+        transition: all 0.2s ease-in-out;
+        border-radius: 12px;
+    }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+        }
+</style>

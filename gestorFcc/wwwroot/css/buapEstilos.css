@@ -1,0 +1,148 @@
+﻿/*Colores de la institución*/
+
+:root {
+    /*Pantone 306C*/
+    --buap-cian: #09B5E2;
+    --buap-azul: #122E48;
+    --buap-ingenieria: #edc6c2a;
+    /*Tipografía*/
+
+    --buap-titulo: 'Gotham', 'Source Sans Pro', sans-serif;
+    --buap-texto: 'Source Sans Pro', sans-serif;
+}
+
+/*Botones personalizados*/
+.btn-buap {
+    background-color: var(--buap-azul);
+    border-color: var(--buap-azul);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-buap:hover {
+    background-color: var(--buap-cian);
+    border-color: var(--buap-cian);
+    color: white;
+}
+
+.btn-buap-outline {
+    background-color: transparent;
+    border-color: var(--buap-azul);
+    color: var(--buap-azul);
+}
+
+.btn-buap-outline:hover {
+    background-color: var(--buap-azul);
+    color: white;
+}
+
+/*Navbar*/
+
+.navbar-buap {
+    background-color: var(--buap-azul) !important;
+    border-bottom: 4px solid var(--buap-azul);
+}
+
+.navbar-buap .navbar-brand, .navbar-buap, navbar-nav .nav-link {
+        color: white !important;
+        font-weight: 600;
+}
+
+.navbar-buap .navbar-nav -nav-link:hover {
+        color: var(--buap-cian) !important;
+}
+
+/*Tarjetas*/
+
+.card-buap{
+    border: 1px solid var(--buap-azul);
+    border-top: 4px solid var(--buap-azul);
+}
+
+.card-header-buap {
+    background-color: var(--buap-azul);
+    color: white;
+    font-weight: 600;
+}
+
+/*Tablas*/
+
+.table-buap thead {
+    background-color: var(--buap-azul);
+    color: white;
+}
+
+.table-buap th {
+    border-bottom: 2px solid var(--buap-cian);
+}
+
+/*Formularios*/
+
+.form-control:focus {
+    border-bottom-color: var(--buap-azul);
+    box-shadow: 0 0 0 0.2rem rgba(0,51,102,0.25);
+}
+
+/*Logo de la institución*/
+
+.buap-header {
+    background: linear-gradient(135deg, var(--buap-azul) 0%, #004080 100%);
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.buap-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buap-logo {
+    height: 80px;
+    width: auto;
+}
+
+.buap-title {
+    font-family: var(--buap-titulo);
+}
+
+.buap-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Footer BUAP */
+.buap-footer {
+    background-color: var(--buap-azul);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 3px solid var(--buap-cian);
+}
+
+/* Alertas personalizadas */
+.alert-buap {
+    border-left: 4px solid var(--buap-azul);
+    background-color: lightgray;
+}
+
+/* Badges personalizados */
+.badge-buap {
+    background-color: var(--buap-azul);
+    color: white;
+}
+
+/* ===== LAYOUT GENERAL ===== */
+body {
+    font-family: var(--buap-texto);
+    background-color: #f5f5f5;
+}
+
+.main-container {
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+

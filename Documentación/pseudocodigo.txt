@@ -176,3 +176,11 @@ INICIO validarDatosCreacion(entidad, datos)
     
     RETORNAR {"valido": (errores.vacio), "errores": errores}
 FIN
+
+<div class="navbar-nav">
+    <a class="nav-link" href="/Alumnos">Alumnos</a>
+    <a class="nav-link" href="/Docentes">Docentes</a>
+    <a class="nav-link" href="/Cursos">Cursos</a>
+    <a class="nav-link" href="/Coloquios">Coloquios</a>
+    <a class="nav-link" href="/Account/Logout">Cerrar Sesión</a>
+</div>
